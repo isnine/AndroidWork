@@ -48,11 +48,8 @@ public class MainActivity extends Activity {
             case R.id.showButton:
                 read();
                 break;
-
             }
-
         }
-
     };	
 	
     /**
@@ -77,7 +74,7 @@ public class MainActivity extends Activity {
              *             MODE_WORLD_WRITEABLE ¹«ÓÃ ¿É¶ÁÐ´
              *  */
             FileOutputStream outputStream = openFileOutput(fileName,
-                    Activity.MODE_PRIVATE);
+                    Activity.MODE_APPEND);
             outputStream.write(content.getBytes());
             outputStream.flush();
             outputStream.close();
